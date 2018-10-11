@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get('/', function () {
+//    return view('index');
+//})->name('home');
+
+//Các use case của người dùng chưa đăng nhập (hoặc đã đăng nhập)
+
+Route::get('/tutor/search', 'TutorController@search');
+
+Route::get('/tutor/detail/{id}', 'TutorController@getTutorDetailById');
+
