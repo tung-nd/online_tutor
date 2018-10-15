@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/', function () {
-//    return view('index');
-//})->name('home');
+Route::get('/', function () {
+    return view('index');
+})->name('home');
 
 //Các use case của người dùng chưa đăng nhập (hoặc đã đăng nhập)
 

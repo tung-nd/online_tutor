@@ -9,8 +9,8 @@ class Subject extends Model
     protected $table = 'subject';
     public $timestamps = false;
 
-    public function tutor()
+    public function teaching()
     {
-        return $this->hasMany('App\Tutor', 'id_subject', 'id');
+        return $this->hasMany('App\Teaching', 'id_subject', 'id');
     }
 }

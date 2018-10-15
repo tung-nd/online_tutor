@@ -23,8 +23,10 @@ class TutorController extends Controller
 
     public function getTutorDetailById($id)
     {
-        $tutor = Tutor::getDetail($id);
-        return view('detail', ['tutor' => $tutor]);
+        $results = Tutor::getDetail($id);
+        $tutor = $results["tutor"];
+        $reviews = $results["reviews"];
+        return view('detail', ['tutor' => $tutor, 'reviews' => $reviews]);
     }
 
 
